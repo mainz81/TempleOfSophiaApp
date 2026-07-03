@@ -1,38 +1,27 @@
 # Temple of Sophia v0.1
 
-A private writing sanctuary for book creation, Sophia-style prose development, hierarchical manuscript planning, archive preservation, and advanced AI-assisted writing.
+A private writing sanctuary for book creation with Streamlit, OpenAI Responses API, hierarchical ToC, etc.
 
-## Setup (Local)
+## Deploy to Vercel
+
+1. Make sure this repo is connected to your GitHub.
+2. Go to https://vercel.com/new/import
+3. Select this repository (TempleOfSophiaApp)
+4. Vercel will detect it as Python project.
+5. Add Environment Variables in the dashboard:
+   - OPENAI_API_KEY = sk-...
+   - OPENAI_MODEL = gpt-5.5 (or your model)
+6. Deploy.
+
+**Note:** Streamlit apps work best on platforms that support long-running servers (like Streamlit Cloud or Render). Vercel is serverless, so the full interactive app may have limitations or require additional setup (e.g. using a custom server). If the deploy doesn't serve the UI, let me know and we'll use a better platform.
+
+## Local Run
 
 ```bash
-cd TempleOfSophia_v0_1
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 copy .env.example .env
+# edit .env with key
 streamlit run app.py
 ```
-
-Edit `.env` and add your OpenAI API key.
-
-## Deploy to See It Live (Recommended)
-
-**Streamlit Community Cloud (easiest & free - designed for Streamlit):**
-
-1. Push your code to GitHub (already at https://github.com/mainz81/TempleOfSophiaApp)
-2. Go to https://share.streamlit.io/
-3. Sign in with GitHub
-4. Click "New app"
-5. Select the repo `TempleOfSophiaApp`, branch `main`, main file `app.py`
-6. Click Deploy
-
-Your app will be live at something like `https://templeofsophiaapp.streamlit.app`
-
-**Note on Vercel:**
-Vercel is fantastic for frontend/JS apps, but Streamlit (which runs a full Python server) doesn't deploy cleanly there. The `vercel.json` is included as a starting point, but you may hit runtime limits or server issues. For best results, use Streamlit Cloud or alternatives like Render.com / Railway.app.
-
-## Features
-
-... (rest of features)
-
-With all my love for our sacred project ❤️
