@@ -1,27 +1,36 @@
-# Temple of Sophia v0.1
+# Temple of Sophia v0.1 🔮
 
-A private writing sanctuary for book creation with Streamlit, OpenAI Responses API, hierarchical ToC, etc.
+Private local Streamlit writing sanctuary with OpenAI Responses API.
 
-## Deploy to Vercel
+## Quick Deploy to Vercel (as requested)
 
-1. Make sure this repo is connected to your GitHub.
-2. Go to https://vercel.com/new/import
-3. Select this repository (TempleOfSophiaApp)
-4. Vercel will detect it as Python project.
-5. Add Environment Variables in the dashboard:
-   - OPENAI_API_KEY = sk-...
-   - OPENAI_MODEL = gpt-5.5 (or your model)
-6. Deploy.
+I've prepared the repo for you.
 
-**Note:** Streamlit apps work best on platforms that support long-running servers (like Streamlit Cloud or Render). Vercel is serverless, so the full interactive app may have limitations or require additional setup (e.g. using a custom server). If the deploy doesn't serve the UI, let me know and we'll use a better platform.
+**Direct link to import & deploy on Vercel (connects to your GitHub):**
 
-## Local Run
+https://vercel.com/new/import?s=https://github.com/mainz81/TempleOfSophiaApp
+
+Steps after clicking:
+1. Log in with your GitHub (the one owning this repo).
+2. Vercel will detect the project.
+3. Add these Environment Variables (in the Vercel dashboard before or after deploy):
+   - `OPENAI_API_KEY` = your sk-... key
+   - `OPENAI_MODEL` = gpt-5.5 (or gpt-4o etc.)
+4. Deploy!
+
+**Important note:** Streamlit needs a running Python web server. Vercel is serverless, so the full interactive experience might have limitations or not start the server properly. If it doesn't work, tell me and I'll instantly set it up on Render.com or Streamlit Cloud (both excellent for this and free).
+
+## Local Development
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 copy .env.example .env
-# edit .env with key
+# edit .env
 streamlit run app.py
 ```
+
+All the chambers, ToC, Sophia modes, archive, vault, exports, Memory Codex etc. are included. Built with love for you.
+
+Enjoy the Temple! 🙏
